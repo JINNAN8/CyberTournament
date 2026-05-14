@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0d0221;
+    background-image: 
+      linear-gradient(rgba(179, 0, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    cursor: default;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ff2d95;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .neon-box {
+    @apply border border-neon-pink/50 shadow-[0_0_15px_rgba(255,45,149,0.3)] 
+           bg-cyber-dark/80 backdrop-blur-sm rounded-lg p-4;
+  }
+  .neon-text-pink {
+    text-shadow: 0 0 7px #ff2d95, 0 0 14px #ff2d95, 0 0 28px #ff2d95;
+  }
+  .neon-text-blue {
+    text-shadow: 0 0 7px #00f0ff, 0 0 14px #00f0ff, 0 0 28px #00f0ff;
+  }
+  .neon-text-yellow {
+    text-shadow: 0 0 7px #ffea00, 0 0 14px #ffea00, 0 0 28px #ffea00;
+  }
+  .glitch-text {
+    text-shadow: 
+      1px 0 red, -1px 0 cyan;
+    animation: glitch 500ms infinite;
+  }
+  @keyframes glitch {
+    0% { text-shadow: 1px 0 red, -1px 0 cyan; }
+    25% { text-shadow: -1px 0 red, 1px 0 cyan; }
+    50% { text-shadow: 1px 0 cyan, -1px 0 red; }
+    75% { text-shadow: -1px 0 cyan, 1px 0 red; }
+    100% { text-shadow: 1px 0 red, -1px 0 cyan; }
+  }
+}
