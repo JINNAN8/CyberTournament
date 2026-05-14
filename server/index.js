@@ -71,6 +71,7 @@ setInterval(() => {
   }
 }, 5000);
 
-server.listen(3001, () => {
-  console.log('赛博服务器已启动，地址：http://localhost:3001');
+const PORT = process.env.PORT || 3001;
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`赛博服务器已启动，端口：${PORT}`);
 });
