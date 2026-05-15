@@ -15,9 +15,9 @@ export default function App() {
   const liveUpdate = useSocket('matchUpdate')
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/matches').then(res => setMatches(res.data))
-    axios.get('http://localhost:3001/api/teams').then(res => setTeams(res.data))
-    axios.get('http://localhost:3001/api/players').then(res => setPlayers(res.data))
+    axios.get('http://119.91.56.69:3001/api/matches').then(res => setMatches(res.data))
+    axios.get('http://119.91.56.69:3001/api/teams').then(res => setTeams(res.data))
+    axios.get('http://119.91.56.69:3001/api/players').then(res => setPlayers(res.data))
   }, [])
 
   useEffect(() => {
